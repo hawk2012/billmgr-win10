@@ -1,0 +1,12 @@
+<% var billurl = project.billurl && project.billurl != '' ? project.billurl : 'https://' + hostname + '/billmgr'; %>
+<%
+    var is_windows = false;
+    var is_server = false;
+    if (item.create_os_name)
+        is_windows =  item.create_os_name.toLowerCase().search(/windows/) >= 0;
+        is_server = item.create_os_name.toLowerCase().search(/server/) >= 0;
+    else
+        is_windows = item.ostempl && item.ostempl.toLowerCase().search(/windows/) >= 0;
+        is_server = item.ostempl.toLowerCase().search(/server/) >= 0;
+%>
+<% var os_username = is_windows ? (is_server ? 'Admin' : 'admin') : 'root'; %>
