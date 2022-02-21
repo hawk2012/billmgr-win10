@@ -3,4 +3,6 @@ Billmanager Windows 10 Admin user name fix
 
 Образец кода в файле code.
 
-<img src="code.png">
+Редактировать как на скриншоте.
+
+<img src="code.jpg">
